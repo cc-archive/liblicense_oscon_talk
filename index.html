@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <div class="slide">
+  <div class="slide butter">
     <h1>Agenda</h1>
     
     <ul>
@@ -96,15 +96,10 @@
     <div class="center-container">
       <div class="center-content">
         <pre>
-<code>
-&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns="http://www.w3.org/1999/xhtml/vocab#"&gt;
-    &lt;rdf:Description rdf:about="http://www.lessig.org/blog/"&gt;
-        &lt;license rdf:resource="http://creativecommons.org/licenses/by/3.0/" /&gt;
-    &lt;/rdf:Description&gt;
-&lt;/rdf:RDF&gt;
-</code>
-</pre>
+	  <code>
+	  &lt;a href="http://creativecommons.org/licenses/by/3.0"
+	  rel="license"&gt;CC BY 3.0&lt;/a&gt;
+	  </code>
       </div>
     </div>
   </div>
@@ -126,54 +121,10 @@
     </ul>
   </div>
 
-  <div class="slide scarlet-red">
-    <div class="center-container">
-      <div class="center-content">
-        <h1>Previous Recommendation</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide scarlet-red">
-    <div class="center-container">
-      <div class="center-content">
-        <h1 style="font-family: monospace;">&lt;!--<br />
-        &nbsp;&nbsp;&nbsp;metadata<br />
-        --&gt;</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide scarlet-red">
-    <h1>Pervasive Problems</h1>
-    
-    <ul>
-      <li>Opaque to parsers</li>
-      <li>Opaque to humans</li>
-      <li>Easy to screw up</li>
-      <li>Overly verbose</li>
-    </ul>
-
-  </div>
-
   <div class="slide sky-blue">
     <div class="center-container">
       <div class="center-content">
         <h1>CC Rights Expression Language</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide sky-blue center-text">
-
-    <div class="center-container">
-      <div class="center-content">
-	<p style="font-size:1.5em; line-height: 130%;">"Compared to the previous recommendation, 
-	  ccREL is intended <br />to be both easier for content 
-	  creators and publishers to provide,<br /> and more 
-	  convenient for user communities and tool builders <br />
-	  to consume, extend, and redistribute."
-	</p>
       </div>
     </div>
   </div>
@@ -216,8 +167,6 @@
 
       <li>prohibits</li>
 
-      <li>attribution URL</li>
-
       <li>jurisdiction</li>
 
       <li>deprecation date</li>
@@ -226,6 +175,7 @@
     </ul>
   </div>
 
+<!--
   <div class="slide chocolate">
     <div class="center-container">
       <div class="center-content">
@@ -233,12 +183,12 @@
       </div>
     </div>
   </div>
-
+-->
 
   <div class="slide chocolate">
         <h1>Principles for Publishing ccREL in HTML</h1>
 
-        <ul class="incremental">
+        <ul> 
           <li>independence + extensibility</li>
 
           <li>Don't Repeat Yourself (DRY)</li>
@@ -258,16 +208,17 @@
     </div>
   </div>
 
-<!--
+
   <div class="slide chocolate">
         <h1>Principles for Free-Floating Content</h1>
 
-        <ul class="incremental">
+        <ul>
           <li>Consistency</li>
 
           <li>Publisher Accountability</li>
 
           <li>Simplicity</li>
+	  <li>Don't Break Shit</li>
         </ul>
   </div>
 
@@ -279,16 +230,148 @@
     </div>
   </div>
 
-    </h2>
-</div>
--->
 
+  <div class="slide">
+    <h1>license, web statement</h1>
+  </div>
+
+  <div class="slide">
+    <h1> non-XMP-supported formats?</h1>
+  </div>
+
+  <div class="slide">
+    <h1>liblicense</h1>
+  </div>
+
+  <div class="slide">
+    <h1>liblicense: Overview</h1>
+
+    <ul>
+      <li>Small C library</li>
+      <li>Wraps the <acronym value="Creative Commons">CC</acronym> 
+	<acronym value="Creative Commons Rights Expression
+			Language">ccREL</acronym> metadata</li>
+      <li>Resolves license URIs to their metadata</li>
+      <li>Provides an I/O module API to read/write metadata</li>
+      <li class="incremental"><blink>BONUS:</blink> A graphical
+	license chooser and icons, should you need them.</li>
+    </ul>
+    
+  </div>
+	      
+  <div class="slide plum">
+    <h1>Mmm... layer cake</h1>
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+        <img src="images/liblicense_architecture.png" 
+	     alt="liblicense layer cake" />
+
+      </div>
+    </div>
+  </div>
+
+  <div class="slide plum">
+    <h1>WTF BBQ?</h1>
+    mp3
+  </div>
+
+
+  <div class="slide plum">
+    <h1>WTF BBQ?</h1>
+    ogg
+  </div>
+
+  <div class="slide plum">
+    <h1>WTF BBQ?</h1>
+    PDF
+  </div>
+
+  <div class="slide plum">
+    <h1>WTF BBQ?</h1>
+    PNG
+  </div>
+  
+  <div class="slide plum">
+    <h1>Interacting with Licensed Content</h1>
+  </div>
+  <div class="slide plum">
+    <h1>What license does this file have?</h1>
+
+    <h2>C</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+    <h1></h1>
+    <h2>Python</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+  </div>
+
+  <div class="slide plum">
+    <h1>Set the license for this file</h1>
+
+    <h2>C</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+    <h1></h1>
+    <h2>Python</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+  </div>
+
+  <div class="slide plum">
+    <h1>I can haz chooser?</h1>
+
+    <h2>C</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+    <h1></h1>
+    <h2>Python</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+  </div>
+
+  <div class="slide plum">
+    <h1>Interacting with Licensed Content</h1>
+    <ul>
+      <li>Where do I look for more permission?</li>
+    </ul>
+    <code>code</code>
+  </div>
+
+  <div class="slide plum">
+    <h1>Interacting with Licensed Content</h1>
+    <ul>
+      <li>How do I attribute this person?</li>
+    </ul>
+    <code>code</code>
+  </div>
+
+  <div class="slide">
+    Questions
+  </div>
+
+  <div class="slide">
+    Demos
+  </div>
+  
 <div class="slide aluminum">
   <div class="center-container">
     <div class="center-content">
       <h1>Questions?</h1>
-      <h2><a href="http://wiki.creativecommons.org/Semantic_Technology_2008">
-	  http://wiki.creativecommons.org/Semantic_Technology_2008
+      <h2><a href="http://wiki.creativecommons.org/liblicense">
+	  http://wiki.creativecommons.org/liblicense
 	</a>
       </h2>
     </div>
