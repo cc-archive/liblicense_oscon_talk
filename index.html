@@ -12,10 +12,13 @@
     <link rel="stylesheet" type="text/css" 
 	  media="screen, projection, print" 
 	  href="resources/yui-reset-fonts-grids.css" />
+
     <link rel="stylesheet" type="text/css" 
 	  media="screen, projection, print" href="Slidy/slidy.css" />
+
     <script src="Slidy/slidy.js" charset="utf-8" type="text/javascript">
     </script>
+
     <link rel="stylesheet" type="text/css" 
 	  media="screen, projection, print" href="resources/salsa.css"
 	  /> 
@@ -128,17 +131,18 @@
       </div>
     </div>
   </div>
-
-  <div class="slide sky-blue">
+  
+  <div class="slide sky-blue">      
     <div class="center-container">
       <div class="center-content">
-        <h1>Work Properties</h1>
-
+        <h1 id="work-props-title">Work Properties</h1>
         <h1>License Properties</h1>
       </div>
     </div>
   </div>
 
+  </div>
+  
   <div class="slide sky-blue">
     <h1>Work Properties</h1>
 
@@ -189,7 +193,7 @@
         <h1>Principles for Publishing ccREL in HTML</h1>
 
         <ul class="incremental"> 
-          <li>independence + extensibility</li>
+          <li>Independence &amp; Extensibility</li>
 
           <li>Don't Repeat Yourself (DRY)</li>
 
@@ -203,7 +207,7 @@
   <div class="slide chocolate">
     <div class="center-container">
       <div class="center-content">
-        <h1>RDFa</h1>
+        <h1 style="text-align:center;">RDFa</h1>
       </div>
     </div>
   </div>
@@ -218,13 +222,14 @@
           <li>Publisher Accountability</li>
 
           <li>Simplicity</li>
+
 	  <li>Don't Break Shit</li>
         </ul>
   </div>
 
   <div class="slide chocolate">
     <div class="center-container">
-      <div class="center-content">
+      <div class="center-content" style="text-align:center;"> 
         <h1>XMP</h1>
       </div>
     </div>
@@ -235,17 +240,36 @@
     <h1>The Basics</h1>
     <ul>
       <li>License URL</li>
-      <li>Web Statement</li>
+      <li>Web Statement (also a URL)</li>
     </ul>
 
     <h2>
   </div>
 
+  <div class="slide chocolate center-text">
+    <h1>License URL</h1>
+    <img src="images/deed.png" alt="CC License Deed" />
+  </div>
+
+
+  <div class="slide chocolate center-text">
+    <h1>Web Statement</h1>
+    <img src="images/magnatune-screencap.png" alt="Magnatune: William" />
+  </div>
+
+  <div class="slide chocolate center-text">
+    <h1>Magic!</h1>
+    <img src="images/deed-plus.png" 
+	 alt="CC License Deed with Additional Metadata" />
+  </div>
+
+
+
   <div class="slide scarlet-red">
     <div class="center-container">
       <div class="center-content" style="text-align:center;">
 
-	<h1>Danger! Danger!</h1>
+	<h1>But what about...</h1>
 
       </div>
     </div>
@@ -256,7 +280,7 @@
       <div class="center-content" style="text-align:center;">
 
 	<h1>MP3</h1>
-
+	<p class="incremental">(WCOP/WOAF in ID3)</p>
       </div>
     </div>
 
@@ -268,6 +292,7 @@
       <div class="center-content" style="text-align:center;">
 
 	<h1>OGG Vorbis</h1>
+	<p class="incremental">(LICENSE/CONTACT)</p>
 
       </div>
     </div>
@@ -279,7 +304,7 @@
       <div class="center-content" style="text-align:center;">
 
 	<h1>FLAC</h1>
-
+	<p class="incremental">(Vorbis Comment)</p>
       </div>
     </div>
   </div>
@@ -349,13 +374,15 @@
 
     <h2>C</h2>
     <pre><code>
-	code
+	ll_init();
+	printf("%s\n", ll_read("/home/nathan/gnomophone.mp3", LL_LICENSE);
+	ll_stop();
     </code></pre>
 
     <h1></h1>
     <h2>Python</h2>
     <pre><code>
-	license_url = liblicense.read('/path/to/file')
+	license_url = liblicense.read('/home/nathan/gnomophone.mp3')
     </code></pre>
 
   </div>
@@ -365,13 +392,17 @@
 
     <h2>C</h2>
     <pre><code>
-	code
+	ll_init();
+	printf("%s\n", ll_write(
+	   "/home/nathan/gnomophone.mp3", 
+	   "http://creativecommons.org/licenses/by/3.0/", LL_LICENSE);
+	ll_stop();
     </code></pre>
 
     <h1></h1>
     <h2>Python</h2>
     <pre><code>
-	liblicense.write('/path/to/file', 
+	liblicense.write('/home/nathan/gnomophone.mp3', 
 	   'http://creativecommons.org/licenses/by/3.0/')
     </code></pre>
 
@@ -398,16 +429,23 @@
 
     <h2>C</h2>
     <pre><code>
-	code
+	ll_init();
+	printf("%s\n", ll_read(
+	   "/home/nathan/gnomophone.mp3", LL_MORE_PERMISSIONS);
+	ll_stop();
     </code></pre>
 
     <h1></h1>
     <h2>Python</h2>
     <pre><code>
-	more_perms = liblicense.read('/path/to/file',
+	more_perms = liblicense.read('/home/nathan/gnomophone.mp3',
 	   liblicense.LL_MORE_PERMISSIONS)
     </code></pre>
 
+    <p>
+      <sup>*</sup> This depends on the development version and will be
+      packaged early next week.
+    </p>
   </div>
 
   <div class="slide aluminum">
@@ -422,7 +460,7 @@
     <div class="center-container">
       <div class="center-content" style="text-align:center;">
 
-    <h1>Demos</h1>
+    <h1>Demo * 3</h1>
     </div></div>
   </div>
   
