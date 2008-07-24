@@ -124,6 +124,49 @@
     </ul>
   </div>
 
+<div class="slide orange">
+	<h1>RDF</h1>
+<div class="incremental" style="text-align:center;">
+
+
+  <img src="images/license-diagram.png" width="55%" />
+        <img src="images/license-graph.png" width="85%" />
+
+</div>
+</div>
+
+
+  <div class="slide scarlet-red">
+    <div class="center-container">
+      <div class="center-content">
+        <h1>Previous Recommendation</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide scarlet-red">
+    <div class="center-container">
+      <div class="center-content">
+        <h1 style="font-family: monospace;">&lt;!--<br />
+        &nbsp;&nbsp;&nbsp;metadata<br />
+        --&gt;</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide scarlet-red">
+    <h1>Pervasive Problems</h1>
+    
+    <ul>
+      <li>Opaque to parsers</li>
+      <li>Opaque to humans</li>
+      <li>Easy to screw up</li>
+      <li>Overly verbose</li>
+    </ul>
+
+  </div>
+
+
   <div class="slide sky-blue">
     <div class="center-container">
       <div class="center-content">
@@ -146,7 +189,7 @@
   <div class="slide sky-blue">
     <h1>Work Properties</h1>
 
-    <ul>
+    <ul class="incremental">
       <li>title</li>
 
       <li>work license</li>
@@ -164,7 +207,7 @@
   <div class="slide sky-blue">
     <h1>License Properties</h1>
 
-    <ul>
+    <ul class="incremental">
       <li>permits</li>
 
       <li>requires</li>
@@ -345,11 +388,14 @@
 
     <ul>
       <li>Small C library</li>
-      <li>Wraps the <acronym value="Creative Commons">CC</acronym> 
+      <li>Exposes the <acronym value="Creative Commons">CC</acronym> 
 	<acronym value="Creative Commons Rights Expression
-			Language">ccREL</acronym> metadata</li>
-      <li>Resolves license URIs to their metadata</li>
-      <li>Provides an I/O module API to read/write metadata</li>
+			Language">ccREL</acronym> metadata
+	<ul class="incremental">
+	  <li>Resolves license URIs to their metadata</li>
+	  <li>Provides an I/O module API to read/write metadata</li>
+	</ul>
+      </li>
       <li class="incremental"><blink>BONUS:</blink> A graphical
 	license chooser and icons, should you need them.</li>
     </ul>
@@ -377,7 +423,8 @@
 
   <div class="slide plum">
     <h1>What license does this file have?</h1>
-
+    
+    <div class="incremental"><div>
     <h2>C</h2>
     <pre><code>
 	ll_init();
@@ -390,18 +437,20 @@
     <pre><code>
 	license_url = liblicense.read('/home/nathan/gnomophone.mp3')
     </code></pre>
+    </div></div>
 
   </div>
 
   <div class="slide plum">
     <h1>Set the license for this file</h1>
 
+    <div class="incremental"><div>
     <h2>C</h2>
     <pre><code>
 	ll_init();
-	printf("%s\n", ll_write(
+	ll_write(
 	   "/home/nathan/gnomophone.mp3", 
-	   "http://creativecommons.org/licenses/by/3.0/", LL_LICENSE));
+	   "http://creativecommons.org/licenses/by/3.0/", LL_LICENSE);
 	ll_stop();
     </code></pre>
 
@@ -411,24 +460,26 @@
 	liblicense.write('/home/nathan/gnomophone.mp3', 
 	   'http://creativecommons.org/licenses/by/3.0/')
     </code></pre>
+    </div></div>
 
   </div>
 
   <div class="slide plum">
     <h1>What about more permissions?</h1>
 
+    <div class="incremental"><div>
     <h2>C</h2>
     <pre><code>
 	ll_init();
 	printf("%s\n", ll_read(
-	   "/home/nathan/gnomophone.mp3", LL_MORE_PERMISSIONS));
+	   "/home/nathan/art.pdf", LL_MORE_PERMISSIONS));
 	ll_stop();
     </code></pre>
 
     <h1></h1>
     <h2>Python</h2>
     <pre><code>
-	more_perms = liblicense.read('/home/nathan/gnomophone.mp3',
+	more_perms = liblicense.read('/home/nathan/art.pdf',
 	   liblicense.LL_MORE_PERMISSIONS)
     </code></pre>
 
@@ -436,11 +487,13 @@
       <sup>*</sup> This depends on the development version and will be
       packaged early next week.
     </p>
+    </div></div>
   </div>
 
   <div class="slide plum">
     <h1>I can haz chooser?</h1>
 
+    <div class="incremental"><div>
     <h2>Python</h2>
     <pre><code>
 def license_chosen(chooser):
@@ -456,6 +509,14 @@ widget.show()
       <sup>*</sup> This is woefully under-documented; we're working on
       that. 
     </p>
+    </div></div>
+  </div>
+
+  <div class="slide plum">
+    <h1>I can haz chooser?</h1>
+    <div style="text-align:center;">
+      <img src="images/liblicense_chooser.png" />
+    </div>
   </div>
 
   <div class="slide aluminum">
