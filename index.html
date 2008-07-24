@@ -258,6 +258,12 @@
   </div>
 
   <div class="slide chocolate center-text">
+    <div class="center-container"><div class="center-content">
+    <h1>*click*</h1>
+    </div></div>
+  </div>
+
+  <div class="slide chocolate center-text nofooter">
     <h1>Magic!</h1>
     <img src="images/deed-plus.png" 
 	 alt="CC License Deed with Additional Metadata" />
@@ -409,22 +415,6 @@
   </div>
 
   <div class="slide plum">
-    <h1>I can haz chooser?</h1>
-
-    <h2>C</h2>
-    <pre><code>
-	code
-    </code></pre>
-
-    <h1></h1>
-    <h2>Python</h2>
-    <pre><code>
-	code
-    </code></pre>
-
-  </div>
-
-  <div class="slide plum">
     <h1>What about more permissions?</h1>
 
     <h2>C</h2>
@@ -445,6 +435,26 @@
     <p>
       <sup>*</sup> This depends on the development version and will be
       packaged early next week.
+    </p>
+  </div>
+
+  <div class="slide plum">
+    <h1>I can haz chooser?</h1>
+
+    <h2>Python</h2>
+    <pre><code>
+def license_chosen(chooser):
+   print chooser.get_license()
+
+widget = LicenseWidget(license)
+widget.connect("destroy", license_chosen)
+        
+widget.show()
+    </code></pre>
+
+    <p>
+      <sup>*</sup> This is woefully under-documented; we're working on
+      that. 
     </p>
   </div>
 
