@@ -110,7 +110,7 @@
     <p>Programs should be able to answer simple questions about
     licensed works.</p>
 
-    <ul class="incremental">
+    <ul>
       <li>What is the work's license?</li>
 
       <li>Commercial use?</li>
@@ -188,7 +188,7 @@
   <div class="slide chocolate">
         <h1>Principles for Publishing ccREL in HTML</h1>
 
-        <ul> 
+        <ul class="incremental"> 
           <li>independence + extensibility</li>
 
           <li>Don't Repeat Yourself (DRY)</li>
@@ -212,7 +212,7 @@
   <div class="slide chocolate">
         <h1>Principles for Free-Floating Content</h1>
 
-        <ul>
+        <ul class="incremental">
           <li>Consistency</li>
 
           <li>Publisher Accountability</li>
@@ -231,20 +231,86 @@
   </div>
 
 
-  <div class="slide">
-    <h1>license, web statement</h1>
+  <div class="slide chocolate">
+    <h1>The Basics</h1>
+    <ul>
+      <li>License URL</li>
+      <li>Web Statement</li>
+    </ul>
+
+    <h2>
   </div>
 
-  <div class="slide">
-    <h1> non-XMP-supported formats?</h1>
+  <div class="slide scarlet-red">
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+
+	<h1>Danger! Danger!</h1>
+
+      </div>
+    </div>
   </div>
 
-  <div class="slide">
-    <h1>liblicense</h1>
+  <div class="slide scarlet-red">
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+
+	<h1>MP3</h1>
+
+      </div>
+    </div>
+
   </div>
 
-  <div class="slide">
-    <h1>liblicense: Overview</h1>
+
+  <div class="slide scarlet-red">
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+
+	<h1>OGG Vorbis</h1>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="slide scarlet-red">
+
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+
+	<h1>FLAC</h1>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="slide scarlet-red">
+
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+
+	<h1>Microsoft Office</h1>
+	<p class="incremental">
+	  ?
+	</p>
+
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="slide plum">
+    <div class="center-container">
+      <div class="center-content">
+
+	<h1><code>liblicense</code></h1>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="slide plum">
+    <h1><code>liblicense</code>: Overview</h1>
 
     <ul>
       <li>Small C library</li>
@@ -269,31 +335,15 @@
       </div>
     </div>
   </div>
-
-  <div class="slide plum">
-    <h1>WTF BBQ?</h1>
-    mp3
-  </div>
-
-
-  <div class="slide plum">
-    <h1>WTF BBQ?</h1>
-    ogg
-  </div>
-
-  <div class="slide plum">
-    <h1>WTF BBQ?</h1>
-    PDF
-  </div>
-
-  <div class="slide plum">
-    <h1>WTF BBQ?</h1>
-    PNG
-  </div>
   
   <div class="slide plum">
-    <h1>Interacting with Licensed Content</h1>
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+	<h1>Interacting with Licensed Content</h1>
+      </div>
+    </div>
   </div>
+
   <div class="slide plum">
     <h1>What license does this file have?</h1>
 
@@ -305,7 +355,7 @@
     <h1></h1>
     <h2>Python</h2>
     <pre><code>
-	code
+	license_url = liblicense.read('/path/to/file')
     </code></pre>
 
   </div>
@@ -321,7 +371,8 @@
     <h1></h1>
     <h2>Python</h2>
     <pre><code>
-	code
+	liblicense.write('/path/to/file', 
+	   'http://creativecommons.org/licenses/by/3.0/')
     </code></pre>
 
   </div>
@@ -343,32 +394,41 @@
   </div>
 
   <div class="slide plum">
-    <h1>Interacting with Licensed Content</h1>
-    <ul>
-      <li>Where do I look for more permission?</li>
-    </ul>
-    <code>code</code>
+    <h1>What about more permissions?</h1>
+
+    <h2>C</h2>
+    <pre><code>
+	code
+    </code></pre>
+
+    <h1></h1>
+    <h2>Python</h2>
+    <pre><code>
+	more_perms = liblicense.read('/path/to/file',
+	   liblicense.LL_MORE_PERMISSIONS)
+    </code></pre>
+
   </div>
 
-  <div class="slide plum">
-    <h1>Interacting with Licensed Content</h1>
-    <ul>
-      <li>How do I attribute this person?</li>
-    </ul>
-    <code>code</code>
+  <div class="slide aluminum">
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
+
+    <h1>Questions</h1>
+    </div></div>
   </div>
 
-  <div class="slide">
-    Questions
-  </div>
+  <div class="slide aluminum">
+    <div class="center-container">
+      <div class="center-content" style="text-align:center;">
 
-  <div class="slide">
-    Demos
+    <h1>Demos</h1>
+    </div></div>
   </div>
   
 <div class="slide aluminum">
   <div class="center-container">
-    <div class="center-content">
+    <div class="center-content" style="text-align:center;">
       <h1>Questions?</h1>
       <h2><a href="http://wiki.creativecommons.org/liblicense">
 	  http://wiki.creativecommons.org/liblicense
